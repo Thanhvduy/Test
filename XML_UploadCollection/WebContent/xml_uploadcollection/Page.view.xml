@@ -11,7 +11,7 @@
 		<l:content>
 			<Toolbar>
 				<ToolbarSpacer />
-				<Label text="Layout">
+				<Label text="Layout Test">
 				</Label>
 				<Select
 					id="selectedKey"
