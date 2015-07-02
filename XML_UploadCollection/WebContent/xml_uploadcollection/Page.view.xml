@@ -53,4 +53,6 @@
 			</UploadCollection>
 		</l:content> <!-- sap.ui.core.Control -->
 	</l:VerticalLayout>
+	<Button text="Test">
+	</Button>
 </core:View>
