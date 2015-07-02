@@ -1,0 +1,56 @@
+<core:View
+	xmlns:core="sap.ui.core"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m"
+	xmlns:l="sap.ui.layout"
+	controllerName="sap.m.sample.xml_uploadcollection.Page"
+	xmlns:html="http://www.w3.org/1999/xhtml">
+	<l:VerticalLayout
+		width="100%"
+		enabled="true">
+		<l:content>
+			<Toolbar>
+				<ToolbarSpacer />
+				<Label text="Layout">
+				</Label>
+				<Select
+					id="selectedKey"
+					selectedKey="None"
+					autoAdjustWidth="true"
+					change="onSelectChange"
+					items="{/items}">
+					<items> <!-- sap.ui.core.Item -->
+						<core:Item
+							text="{text}"
+							key="{key}">
+						</core:Item>
+					</items>
+				</Select>
+
+			</Toolbar>
+			<UploadCollection
+				id="uploadCollectionId"
+				maximumFilenameLength="35"
+				multiple="true"
+				fileDeleted="onFileDeleted"
+				fileRenamed="onFileRenamed"
+				uploadComplete="onUploadComplete"
+				items="{/items}">
+				<items> <!-- sap.m.UploadCollectionItem -->
+					<UploadCollectionItem
+						contributor="{contributor}"
+						documentId="{documentId}"
+						fileName="{fileName}"
+						fileSize="{fileSize}"
+						mimeType="{mimeType}"
+						thumbnailUrl="{thumbnailUrl}"
+						uploadedDate="{uploadedDate}"
+						url="{url}"
+						enableEdit="true"
+						enableDelete="true">
+					</UploadCollectionItem>
+				</items>
+			</UploadCollection>
+		</l:content> <!-- sap.ui.core.Control -->
+	</l:VerticalLayout>
+</core:View>
